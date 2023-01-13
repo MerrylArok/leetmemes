@@ -1,0 +1,60 @@
+.header {
+ 
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  padding: 0 3rem;
+  align-items: center;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  background: linear-gradient(to right, #fde8e8, #dadcf8);
+
+}
+
+.header>* {
+  padding: 0 0.75rem;
+  margin: 0;
+}
+
+a {
+  color: #232424;
+}
+
+a:hover {
+  color: black;
+}
+
+.header h2 {
+  margin-left: auto;
+}
+
+
+.header--logo {
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3rem;
+  /* place-content: center; */
+}
+
+.form--textElement{
+ width:calc(49%);
+ padding:0.5rem;
+}
+
+.form--submit{
+  width:100%;
+  padding:1rem;
+  margin-top:1rem;
+  cursor:pointer;
+  background-color: rgb(209, 37, 37);
+  border:none;
+  border-radius:5px;
+  color:white;
+  font-weight:600;
+  font-size:1.5rem;
+}
