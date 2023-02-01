@@ -1,12 +1,11 @@
 .header {
   display: flex;
-  height: 5rem;
+  height: 4rem;
   width: 100%;
   padding: 0 3rem;
   align-items: center;
   border-bottom: 1px solid rgb(207, 207, 207);
   background: linear-gradient(to right, #fde8e8, #dadcf8);
-
 }
 
 
@@ -23,10 +22,6 @@ a:hover {
   color: black;
 }
 
-.header h2 {
-  margin-left: auto;
-}
-
 
 .header--logo {
   height: 100%;
@@ -34,7 +29,7 @@ a:hover {
 
 .main {
   max-width: 1250px;
-  margin: 3rem auto;
+  margin: 3rem auto 0 auto;
   text-align: center;
 }
 
@@ -42,7 +37,8 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2rem;
+  margin:2rem 0;
+  padding: 0 2rem;
 
   /* place-content: center; */
 }
@@ -52,10 +48,10 @@ a:hover {
   padding: 0.5rem;
 }
 
-.form--submit {
-  width: 100%;
+.form--submit {  
+  width: 80%;
   padding: 1rem;
-  margin-top: 1rem;
+  margin:auto;
   cursor: pointer;
   background-color: rgb(209, 37, 37);
   border: none;
@@ -63,4 +59,45 @@ a:hover {
   color: white;
   font-weight: 600;
   font-size: 1.5rem;
+}
+
+.memeDiv{
+  position: relative;
+  margin:1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.memeText{
+  position:absolute;
+  font-size:2.65rem;
+  max-width:80%;
+  text-transform: uppercase;
+  color:white;
+  letter-spacing: 1px;
+  text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.top{
+  top:1%;
+}
+
+.bottom{
+  bottom:1%;
+}
+
+.memeImage{
+  max-width: 100%;
+  /* max-height:55vh; */
+  height:55vh;
+  border:2px solid black;
 }
