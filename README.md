@@ -1,4 +1,4 @@
-Project to practice state controlled components, react hook (setState and useState), async/await for getting data from API, data destructuring.
+Project to practice state controlled components, react hooks (setState and useState), async/await for getting data from API, data destructuring.
 
 Live link [here](https://jolly-granita-181da5.netlify.app/).
 
