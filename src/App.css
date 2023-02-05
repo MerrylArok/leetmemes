@@ -28,30 +28,81 @@ a:hover {
 }
 
 .main {
-  max-width: 1250px;
-  margin: 3rem auto 0 auto;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
   text-align: center;
-}
-
-.form {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+.textInput {
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.memeDiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.memeText {
+  user-select: none;
+  position: absolute;
+  max-width: 80%;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.top {
+  top: 1%;
+}
+
+.bottom {
+  bottom: 1%;
+}
+
+.memeImage {
+  max-width: 100%;
+  /* max-height:55vh; */
+  max-height: 55vh;
+  border: 2px solid black;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin:2rem 0;
-  padding: 0 2rem;
-
-  /* place-content: center; */
+  height: 5rem;
+  margin: 0.5rem 0 0 0;
 }
 
-.form--textElement {
-  width: calc(49%);
-  padding: 0.5rem;
+.buttonContainer>* {
+  margin-right: 1rem;
 }
 
-.form--submit {  
-  width: 80%;
+.buttonIcon {
+  height: 1.35rem;
+  margin: auto .5rem;
+}
+
+.formSubmit,
+.downloadMeme {
   padding: 1rem;
-  margin:auto;
   cursor: pointer;
   background-color: rgb(209, 37, 37);
   border: none;
@@ -61,43 +112,47 @@ a:hover {
   font-size: 1.5rem;
 }
 
-.memeDiv{
-  position: relative;
-  margin:1rem auto;
+.downloadMeme {
+  background-color: rgb(24, 202, 24);
+}
+
+.adjustFont {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.memeText{
-  position:absolute;
-  font-size:2.65rem;
-  max-width:80%;
-  text-transform: uppercase;
-  color:white;
-  letter-spacing: 1px;
-  text-shadow:
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
+.fontAdjust {
+  height: 3rem;
+  width: 5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgb(112, 112, 112);
 }
 
-.top{
-  top:1%;
+.fontAdjust:last-child {
+  margin-left: 0.5rem;
 }
 
-.bottom{
-  bottom:1%;
-}
+@media (max-width:750px) {
 
-.memeImage{
-  max-width: 100%;
-  /* max-height:55vh; */
-  height:55vh;
-  border:2px solid black;
+  .buttonContainer {
+    height:3rem;
+  }
+
+  .buttonContainer>* {
+    margin-right: 0.5rem;
+  } 
+
+
+  .buttonText {
+    display: none;
+  }
+
+  .fontAdjust {
+    width:3rem;
+  }
 }
