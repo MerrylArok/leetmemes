@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import randomIcon from "./randomMeme.svg";
-import downloadIcon from "./downloadIcon.svg"
+import downloadIcon from "./downloadIcon.svg";
+import html2canvas from "../../node_modules/html2canvas"
 
 
 let react = useState;
@@ -49,6 +50,20 @@ export default function Meme() {
         })
     }
 
+    async function screenshot() {
+        //This function uses the html2canvas library to convert the memeDiv into a canvas element
+        //Canvas element is then returned in base64 and converted to an image which is then downloaded
+        const screenshotTarget = document.getElementById('screenshotArea') as HTMLElement;
+
+        //useCORS will properly render Cross Origin images
+        const target2Canvas = await html2canvas(screenshotTarget, { useCORS: true });
+        const dataURL = target2Canvas.toDataURL('image/jpeg');
+
+        const link = document.createElement('a');
+        link.href = dataURL;
+        link.download = 'certifiedFunnyMeme.jpeg';
+        link.click();
+    }
 
 
     useEffect(() => {
@@ -79,7 +94,7 @@ export default function Meme() {
                 name="topText"
                 onChange={onChange} />
 
-            <div className="memeDiv">
+            <div className="memeDiv" id="screenshotArea">
                 <h1 className="top memeText" style={{ fontSize: `${formText.fontSize}rem` }}>{formText.topText}</h1>
                 <img className="memeImage" src={meme} alt="memeImage" />
                 <h1 className="bottom memeText" style={{ fontSize: `${formText.fontSize}rem` }}>{formText.bottomText}</h1>
@@ -98,8 +113,7 @@ export default function Meme() {
                     <span className="buttonText">Randomize</span>
                 </button>
 
-                <button className="downloadMeme">
-
+                <button className="downloadMeme" onClick={screenshot}>
                     <img src={downloadIcon} className="buttonIcon"></img>
                     <span className="buttonText">Download</span>
                 </button>
