@@ -40,6 +40,7 @@ a:hover {
 .textInput {
   padding: 0.75rem;
   margin: 0.5rem 0;
+  text-align: center;
 }
 
 .memeDiv {
@@ -79,7 +80,7 @@ a:hover {
 .memeImage {
   max-width: 100%;
   /* max-height:55vh; */
-  min-height:40vh;
+  min-height: 40vh;
   max-height: 55vh;
   border: 2px solid black;
 }
@@ -88,7 +89,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 5rem;
+  height: 4rem;
   margin: 0.5rem 0 0 0;
 }
 
@@ -111,6 +112,10 @@ a:hover {
   color: white;
   font-weight: 600;
   font-size: 1.5rem;
+}
+
+.button:active {
+  transform: scale(0.98);
 }
 
 .downloadMeme {
@@ -141,12 +146,12 @@ a:hover {
 @media (max-width:750px) {
 
   .buttonContainer {
-    height:3rem;
+    height: 3rem;
   }
 
   .buttonContainer>* {
     margin-right: 0.5rem;
-  } 
+  }
 
 
   .buttonText {
@@ -154,6 +159,6 @@ a:hover {
   }
 
   .fontAdjust {
-    width:3rem;
+    width: 3rem;
   }
 }

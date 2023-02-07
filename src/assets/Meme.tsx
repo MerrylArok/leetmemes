@@ -108,20 +108,20 @@ export default function Meme() {
 
             <div className="buttonContainer">
 
-                <button className="formSubmit" onClick={randomMeme} >
+                <button className="formSubmit button" onClick={randomMeme} >
                     <img src={randomIcon} className="buttonIcon"></img>
                     <span className="buttonText">Randomize</span>
                 </button>
 
-                <button className="downloadMeme" onClick={screenshot}>
+                <button className="downloadMeme button" onClick={screenshot}>
                     <img src={downloadIcon} className="buttonIcon"></img>
                     <span className="buttonText">Download</span>
                 </button>
 
                 <div className="adjustFont">
                     <h2 className="buttonText">Font Size</h2>
-                    <button className="fontAdjust" onClick={increaseFont}>+</button>
-                    <button className="fontAdjust" onClick={decreaseFont}>-</button>
+                    <button className="fontAdjust button" onClick={increaseFont}>+</button>
+                    <button className="fontAdjust button" onClick={decreaseFont}>-</button>
                 </div>
 
 
